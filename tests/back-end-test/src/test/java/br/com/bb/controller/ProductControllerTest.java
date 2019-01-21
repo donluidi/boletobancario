@@ -37,7 +37,7 @@ public class ProductControllerTest {
     public void listByCategoryAlimentos() throws Exception {
         mockMvc.perform(get("/product/listByCategory/1"))
         .andExpect(status().isOk())
-	    		.andExpect(jsonPath("$", hasSize(2)))
+	    	.andExpect(jsonPath("$", hasSize(2)))
 	        .andExpect(jsonPath("$[0].id", is(1)))
 	        .andExpect(jsonPath("$[0].name", is("Arroz")))
 	        .andExpect(jsonPath("$[1].id", is(2)))
@@ -45,7 +45,7 @@ public class ProductControllerTest {
     }
 
 	@Test
-	public void listByCategoryEletrodomésticos() throws Exception {
+	public void listByCategoryEletrodomesticos() throws Exception {
 		mockMvc.perform(get("/product/listByCategory/2"))
 		.andExpect(status().isOk())
 		.andExpect(jsonPath("$", hasSize(3)))
@@ -58,7 +58,7 @@ public class ProductControllerTest {
 	}
 
 	@Test
-	public void listByCategoryMóveis() throws Exception {
+	public void listByCategoryMoveis() throws Exception {
 		mockMvc.perform(get("/product/listByCategory/3"))
 		.andExpect(status().isOk())
 		.andExpect(jsonPath("$", hasSize(3)))
